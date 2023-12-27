@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Booking, Table
+from .models import Booking, Table, MenuItem
 
 class BookingAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'no_of_guests', 'booking_date')
@@ -15,3 +15,4 @@ class TableAdmin(admin.ModelAdmin):
 # Register models with the custom admin classes
 admin.site.register(Booking, BookingAdmin)
 admin.site.register(Table, TableAdmin)
+admin.site.register(MenuItem)
